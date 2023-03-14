@@ -1,2 +1,3 @@
-# RocketOperator
-An arcade game that includes lighting, level loading and flying physics in Unity 3D
+# Rocket Operator
+
+You finished your final project for your college. It is a small rocket that can generate infinite fuel because of your invention. Your professor prepared 5 platforms and to get A+, your little rocket must pass 5 of them. Use A, D, or left and right arrow on your keyboard to rotate your rocket and use the spacebar to thrust your rocket. Good Luck!
