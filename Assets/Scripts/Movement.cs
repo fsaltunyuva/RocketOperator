@@ -25,17 +25,6 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-        try
-        {
-            if (!FindObjectOfType<ButtonController>().getcanMove())
-            {
-                return;
-            }
-        }
-        catch (Exception e)
-        {
-            
-        }
         ProcessThrust();
         ProcessRotation();
     }

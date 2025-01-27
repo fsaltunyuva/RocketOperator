@@ -1,28 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ButtonController : MonoBehaviour
 {
     [SerializeField] private GameObject canvas;
-    private bool canMove = false;
-    
+
+    private void Start()
+    {
+        Time.timeScale = 0;
+        
+        if(Singleton.Instance.isTutorialShown)
+        {
+            canvas.SetActive(false);
+            Time.timeScale = 1;
+        }
+        else
+        {
+            canvas.SetActive(true);
+        }
+    }
+
     public void Continue()
     {
         canvas.SetActive(false);
-        canMove = true;
+        Time.timeScale = 1;
+        Singleton.Instance.isTutorialShown = true;
     }
-
-    public void setcanMove(bool obj)
-    {
-        canMove = obj;
-    }
-
-    public bool getcanMove()
-    {
-        return canMove;
-    }
-    
-
     
 }
